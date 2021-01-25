@@ -7,6 +7,6 @@ let url = `http://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=m
 request({ url:url, json:true }, (error, response) => {
     
     const data = response.body;
-    
+    // console.log(data);
     console.log(`Current Temrature in ${city_name} is ${response.body.main.temp} and the weather is ${response.body.weather[0].main}`)
 } );
